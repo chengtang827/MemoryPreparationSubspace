@@ -4,7 +4,7 @@ loc = 1:7; % number of locations
 locsize = 7;
 N = size(datasets,1); % number of neurons
 %% Cross-temporal decoding in the full space, Figure 1 b
-run = 1;
+run = 1000;
 window = 58;
 perf_full = zeros(window-1,window-1,run);
 for it = 1:run
@@ -33,7 +33,7 @@ line([0,window],[window-38,window-38],'color','w','linewidth',lw);
 Mspace = gramschmidt(Mcomp,Mcomp(:,1)); % find orthogonal basis
 Pspace = gramschmidt(Pcomp,Pcomp(:,1));
 %% Cross-temporal decoding in the working memory subspace, Figure 1d
-run = 1;
+run = 1000;
 window = 58;
 perf_m = zeros(window-1,window-1,run);
 for it = 1:run
@@ -57,7 +57,7 @@ line([0,window],[window-12,window-12],'color','w','linewidth',lw);
 line([0,window],[window-32,window-32],'color','w','linewidth',lw);
 line([0,window],[window-38,window-38],'color','w','linewidth',lw);
 %% Cross-temporal decoding in the motor preparation subspace, Figure 1e
-run = 1;
+run = 1000;
 window = 58;
 perf_p = zeros(window-1,window-1,run);
 for it = 1:run

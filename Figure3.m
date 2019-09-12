@@ -5,12 +5,15 @@ loc = 1:7; % number of locations
 locsize = 7;
 N = size(datasets,1); % number of neurons
 %%
+
+%construct the orthogonal basis for each subspace
 mem_space = gramschmidt(Mcomp,Mcomp(:,1));
 prp_space = gramschmidt(Pcomp,Pcomp(:,1));
 
 con_mem = zeros(N,1);
 con_prp = zeros(N,1);
 
+% contribution is the projection length of each neuron in the subspace
 for n = 1:N
     con_mem(n) = norm(mem_space(n,:),2);
     con_prp(n) = norm(prp_space(n,:),2);
