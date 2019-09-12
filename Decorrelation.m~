@@ -3,11 +3,7 @@ function [comp1,comp2,a,b,minmi] = Decorrelation(delay1,delay2)
 % neuron, and loc is the size of target locations. They contain the trial
 % and time averaged data (second half of each delay) in Delay 1 and Delay 2
 
-% Output: comp1 and comp2 are of size N x loc, and has minimal mutual
-% inforamtion. 
-% minmi: the mutual information
-% a and b: the mixing coefficients
-
+% Output: the decorrelated com
 
 arange = 0:0.01:0.99; % range for parameter search
 brange = 0:0.01:0.99;

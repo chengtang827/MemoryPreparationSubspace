@@ -12,8 +12,8 @@ train_data = zeros(size(dataset,1),size(train_trials,2),size(dataset,3));
 test_data = zeros(size(dataset,1),size(test_trials,2),size(dataset,3));
 % Filling up train_data from dataset. All the values are z_scored using m,st to normalize the firing rate across neurons
 for n = 1:size(dataset,1)
-    train_data(n,:,:) = ((dataset(n,train_trials(n,:),:))-m(n));%./st(n);
-    test_data(n,:,:) = ((dataset(n,test_trials(n,:),:))-m(n));%./st(n);
+    train_data(n,:,:) = ((dataset(n,train_trials(n,:),:))-m(n));
+    test_data(n,:,:) = ((dataset(n,test_trials(n,:),:))-m(n))
 end
 
 acc_loc = struct;
